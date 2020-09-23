@@ -1,14 +1,12 @@
 package parser.extensions
 
-import models.Equality
-import models.Polynomial
 import models.PolynomialTerm
 
-fun findMaxDegree(input: List<Polynomial>): Int {
+fun findMaxDegree(input: List<PolynomialTerm>): Int {
 	var maxDegree = 0
 
 	for (term in input) {
-		if (term is PolynomialTerm && term.degree > maxDegree)
+		if (term.degree > maxDegree)
 			maxDegree = term.degree
 	}
 

@@ -7,15 +7,19 @@ fun putSpaces(input: String): String {
 	var i = 0
 
 	while (i in input.indices) {
-		if (input[i] == ' ') i++
-
-		else if (input[i] == '+' || input[i] == '=' ||
-			(input[i] == '-' && i + 1 in input.indices && !input[i + 1].isDigit())
-		) {
-			output.append(" ${input[i++]} ")
+		when (input[i]) {
+			' ' -> i++
+			'+' -> { output.append(' '); i++ }
+			'=' -> output.append(" ${input[i++]} ")
+			'-' -> {
+				if (i + 1 in input.indices && input[i + 1] == ' ')
+					output.append(" ${input[i]}")
+				else
+					output.append(input[i])
+				i++
+			}
+			else -> output.append(input[i++])
 		}
-
-		else (output.append(input[i++]))
 	}
 	return output.toString()
 }

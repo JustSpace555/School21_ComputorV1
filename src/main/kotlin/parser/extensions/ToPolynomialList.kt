@@ -1,17 +1,20 @@
 package parser.extensions
 
-import models.Equality
-import models.Polynomial
 import models.PolynomialTerm
 import parser.SignalCodes
+import java.lang.NumberFormatException
 
-fun String.toPolynomialTerm(): PolynomialTerm {
+private fun String.toPolynomialTerm(): Pair<PolynomialTerm, SignalCodes> {
 
 	val numberStr = this.slice(0 until this.indexOf('*'))
 	val number = if (numberStr.contains('.')) numberStr.toDouble() else numberStr.toInt()
 
-	val degree = this.slice(this.indexOf('^') + 1 .. this.length).toInt()
-	return PolynomialTerm(number, degree)
+	val degree = try {
+		this.slice(this.indexOf('^') + 1 until this.length).toInt()
+	} catch (e: NumberFormatException) {
+		return Pair(PolynomialTerm(0, 0), SignalCodes.WRONG_DEGREE_FORMAT)
+	}
+	return Pair(PolynomialTerm(number, degree), SignalCodes.OK)
 }
 
 fun toPolynomialList(input: List<String>): Pair<List<PolynomialTerm>, SignalCodes> {
@@ -24,9 +27,12 @@ fun toPolynomialList(input: List<String>): Pair<List<PolynomialTerm>, SignalCode
 			continue
 		}
 		val term = element.toPolynomialTerm()
+		if (term.second != SignalCodes.OK)
+			return Pair(output, term.second)
+
 		if (isWasEquality)
-			term.number = term.number.toDouble() * -1
-		output.add(term)
+			term.first.number = term.first.number.toDouble() * -1
+		output.add(term.first)
 	}
 	return Pair(output.toList(), SignalCodes.OK)
 }
