@@ -1,5 +1,6 @@
 package parser.extensions
 
+import globalextensions.times
 import models.PolynomialTerm
 import parser.SignalCodes
 import java.lang.NumberFormatException
@@ -31,7 +32,7 @@ fun toPolynomialList(input: List<String>): Pair<List<PolynomialTerm>, SignalCode
 			return Pair(output, term.second)
 
 		if (isWasEquality)
-			term.first.number = term.first.number.toDouble() * -1
+			term.first.number *= -1
 		output.add(term.first)
 	}
 	return Pair(output.toList(), SignalCodes.OK)

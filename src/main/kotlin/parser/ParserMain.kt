@@ -1,17 +1,14 @@
 package parser
 
-import models.EmptyPolynomial
-import models.FullPolynomial
-import models.Polynomial
 import models.PolynomialTerm
 import parser.extensions.findMaxDegree
 import parser.extensions.putSpaces
 import parser.extensions.simplifyPolynomial
 import parser.extensions.toPolynomialList
 
-private fun parserError(signal: SignalCodes) = Pair(EmptyPolynomial(), signal)
+private fun parserError(signal: SignalCodes) = Triple(listOf<PolynomialTerm>(), -1, signal)
 
-fun parser(input: String): Pair<Polynomial, SignalCodes> {
+fun parser(input: String): Triple<List<PolynomialTerm>, Int, SignalCodes> {
 	val inputArray: List<String> = putSpaces(input).split(' ')
 	val listPair = toPolynomialList(inputArray)
 
@@ -20,5 +17,5 @@ fun parser(input: String): Pair<Polynomial, SignalCodes> {
 	val maxDegree = findMaxDegree(listPair.first)
 	if (maxDegree > 2) return parserError(SignalCodes.HIGHER_SECOND_DEGREE)
 	val simpledPolynomial = simplifyPolynomial(listPair.first)
-	return Pair(FullPolynomial(simpledPolynomial, maxDegree), SignalCodes.OK)
+	return Triple(simpledPolynomial, maxDegree, SignalCodes.OK)
 }
