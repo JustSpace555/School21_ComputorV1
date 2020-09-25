@@ -3,7 +3,7 @@ package models
 import globalextensions.plus
 import kotlin.math.sign
 
-data class PolynomialTerm(var number: Number, val degree: Int) {
+data class PolynomialTerm(var number: Number, var degree: Int) {
 	private val sign: Double = number.toDouble().sign
 
 	override fun toString(): String =

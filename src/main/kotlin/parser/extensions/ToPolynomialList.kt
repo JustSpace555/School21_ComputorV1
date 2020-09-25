@@ -5,10 +5,23 @@ import models.PolynomialTerm
 import parser.SignalCodes
 import java.lang.NumberFormatException
 
-private fun String.toPolynomialTerm(): Pair<PolynomialTerm, SignalCodes> {
+fun String.toPolynomialTerm(): Pair<PolynomialTerm, SignalCodes> {
 
 	val numberStr = this.slice(0 until this.indexOf('*'))
-	val number = if (numberStr.contains('.')) numberStr.toDouble() else numberStr.toInt()
+	val number =
+		if (numberStr.contains('.')) {
+			try {
+				numberStr.toDouble()
+			} catch (e: NumberFormatException) {
+				return Pair(PolynomialTerm(0, 0), SignalCodes.WRONG_NUMBER_FORMAT)
+			}
+		} else {
+			try {
+				numberStr.toInt()
+			} catch (e: NumberFormatException) {
+				return Pair(PolynomialTerm(0, 0), SignalCodes.WRONG_NUMBER_FORMAT)
+			}
+		}
 
 	val degree = try {
 		this.slice(this.indexOf('^') + 1 until this.length).toInt()
