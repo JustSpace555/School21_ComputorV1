@@ -1,15 +1,31 @@
 package output
 
+import globalextensions.compareTo
+import globalextensions.times
 import models.PolynomialTerm
+import java.lang.StringBuilder
 import java.util.*
 
+private fun getReducedForm(polynomial: List<PolynomialTerm>): String {
+	if (polynomial[0].number == 0 && polynomial[1].number == 0 && polynomial[2].number == 0)
+		return "0"
+
+	val output = StringBuilder()
+	polynomial.map {
+		if (it.number < 0)
+			output.append(" - ${ it.number * -1 } * X^${it.degree}")
+		else
+			output.append(" + $it")
+	}
+
+	output.delete(0, 2)
+	if (polynomial[0].number < 0)
+		output.append("-", 0, 0)
+	return output.toString()
+}
+
 fun printOkOutput(polynomial: List<PolynomialTerm>, degree: Int) {
-	println(
-		"Reduced form: " +
-				polynomial[0].toGeneralString() +
-				polynomial[1].toGeneralString() +
-				polynomial[2].toGeneralString() + " = 0"
-	)
+	println("Reduced form: ${getReducedForm(polynomial)} = 0")
 	println("Polynomial degree: $degree")
 }
 

@@ -17,5 +17,13 @@ fun parser(input: String): Triple<List<PolynomialTerm>, Int, SignalCodes> {
 	val maxDegree = findMaxDegree(listPair.first)
 	if (maxDegree > 2) return parserError(SignalCodes.HIGHER_SECOND_DEGREE)
 	val simpledPolynomial = simplifyPolynomial(listPair.first)
+
+	if (simpledPolynomial[1].number == 0 && simpledPolynomial[2].number == 0) {
+		return if (simpledPolynomial[0].number == 0)
+			parserError(SignalCodes.EVERY_NUMBER_IS_SOLUTION)
+		else
+			parserError(SignalCodes.NO_SOLUTION)
+	}
+
 	return Triple(simpledPolynomial, maxDegree, SignalCodes.OK)
 }
