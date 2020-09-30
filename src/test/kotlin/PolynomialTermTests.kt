@@ -7,18 +7,18 @@ class PolynomialTermTests {
 	@Test
 	fun toStringTest() {
 		val t = PolynomialTerm(1, 2)
-		assertEquals(t.toString(), "1 * X^2")
+		assertEquals("1 * X^2", t.toString())
 
 		t.number = 0
 		t.degree = 0
-		assertEquals(t.toString(), "")
+		assertEquals("0 * X^0", t.toString())
 
 		t.number = 2.3
-		assertEquals(t.toString(), "2.3 * X^0")
+		assertEquals("2.3 * X^0", t.toString())
 
 		t.number = -1.1
 		t.degree = 2
-		assertEquals(t.toString(), "-1.1 * X^2")
+		assertEquals("-1.1 * X^2", t.toString())
 	}
 
 	@Test
@@ -27,7 +27,7 @@ class PolynomialTermTests {
 		val t2 = PolynomialTerm(-10, 2)
 
 		t1 += t2
-		assertEquals(t1.number, 0)
-		assertEquals(t1.degree, 2)
+		assertEquals(0, t1.number)
+		assertEquals(2, t1.degree)
 	}
 }

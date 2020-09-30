@@ -9,4 +9,6 @@ class Discriminant(polynomial: List<PolynomialTerm>) {
 	val argC = polynomial[0].number
 
 	val result = argB * argB - 4 * argA * argC
+
+	override fun toString(): String = result.toString()
 }

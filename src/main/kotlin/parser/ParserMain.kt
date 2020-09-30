@@ -10,6 +10,10 @@ private fun parserError(signal: SignalCodes) = Triple(listOf<PolynomialTerm>(), 
 
 fun parser(input: String): Triple<List<PolynomialTerm>, Int, SignalCodes> {
 	val inputArray: List<String> = putSpaces(input).split(' ')
+
+	if (!inputArray.contains("=") || inputArray.lastIndexOf("=") != inputArray.indexOf("="))
+		return parserError(SignalCodes.WRONG_AMOUNT_EQUAL_SIGNS)
+
 	val listPair = toPolynomialList(inputArray)
 
 	if (listPair.second != SignalCodes.OK) return parserError(listPair.second)

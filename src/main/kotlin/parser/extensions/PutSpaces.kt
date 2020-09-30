@@ -13,10 +13,9 @@ fun putSpaces(input: String): String {
 			'=' -> output.append(" ${input[i++]} ")
 			'-' -> {
 				if (i + 1 in input.indices && input[i + 1] == ' ')
-					output.append(" ${input[i]}")
+					output.append(" ${input[i++]}")
 				else
-					output.append(input[i])
-				i++
+					output.append(input[i++])
 			}
 			else -> output.append(input[i++])
 		}

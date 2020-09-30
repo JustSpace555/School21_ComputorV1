@@ -1,16 +1,18 @@
 package models
 
 import globalextensions.plus
-import kotlin.math.sign
 
 data class PolynomialTerm(var number: Number, var degree: Int) {
-	private val sign: Double = number.toDouble().sign
-
-	override fun toString(): String =
-		if (sign == 0.0)
-			""
-		else
-			"$number * X^$degree"
+	override fun toString(): String {
+		return if (number == 0) ""
+		else {
+			return when (degree) {
+				0 -> "$number"
+				1 -> "$number * x"
+				else -> "$number * x^$degree"
+			}
+		}
+	}
 
 	operator fun plus(input: PolynomialTerm): PolynomialTerm = this.copy(number = number + input.number)
 }

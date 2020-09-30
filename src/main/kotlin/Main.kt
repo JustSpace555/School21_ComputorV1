@@ -1,10 +1,19 @@
 import calculations.calculateSolutions
 import models.Discriminant
-import output.printErrorOutput
-import output.printOkOutput
-import output.printSolutions
+import models.PolynomialTerm
+import output.error.printErrorOutput
+import output.ok.printOkOutput
+import output.ok.printSolutions
 import parser.SignalCodes
 import parser.parser
+
+fun solver(polynomial: Triple<List<PolynomialTerm>, Int, SignalCodes>) {
+	val discriminant = Discriminant(polynomial.first)
+	val solutions = calculateSolutions(discriminant)
+
+	printOkOutput(polynomial.first, polynomial.second)
+	printSolutions(solutions, discriminant)
+}
 
 fun main(args: Array<String>) {
 	if (args.size != 2) {
@@ -18,10 +27,5 @@ fun main(args: Array<String>) {
 		printErrorOutput(listOf(), -1, polynomial.third)
 		return
 	}
-
-	printOkOutput(polynomial.first, polynomial.second)
-	val discriminant = Discriminant(polynomial.first)
-	val solutions = calculateSolutions(discriminant)
-
-	printSolutions(solutions)
+	solver(polynomial)
 }

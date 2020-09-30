@@ -1,8 +1,8 @@
 import org.junit.Test
 import parser.SignalCodes
 import parser.parser
+import java.lang.Exception
 import java.util.*
-import kotlin.test.assertFails
 
 
 class ParserTests {
@@ -61,9 +61,14 @@ class ParserTests {
 	private fun testInvalidInputs(input: List<String>) {
 		for (element in input) {
 			val parserOutput = parser(element)
-			if (parserOutput.third != SignalCodes.OK)
+			if (parserOutput.third != SignalCodes.OK) {
+				println("Test passed: $element")
+				println("Fails with ${parserOutput.third}")
+				println()
 				continue
-			assertFails { println("Test fail on: $element with ${parserOutput.third}")}
+			}
+			val message = "Test fail on: $element with ${parserOutput.third}\n" + parserOutput.first.toString()
+			throw Exception(message)
 		}
 	}
 }
