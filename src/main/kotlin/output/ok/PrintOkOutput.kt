@@ -6,8 +6,8 @@ import models.Discriminant
 import models.PolynomialTerm
 import java.lang.StringBuilder
 
-private fun getReducedForm(polynomial: List<PolynomialTerm>): String {
-	if (polynomial[0].number == 0 && polynomial[1].number == 0 && polynomial[2].number == 0)
+private fun getReducedForm(polynomial: List<PolynomialTerm>, degree: Int): String {
+	if (polynomial.isEmpty() || polynomial[0].number == 0 && polynomial[1].number == 0 && polynomial[2].number == 0)
 		return "0"
 
 	val output = StringBuilder()
@@ -21,13 +21,13 @@ private fun getReducedForm(polynomial: List<PolynomialTerm>): String {
 	}
 
 	output.delete(0, 3)
-	if (polynomial[0].number < 0)
-		output.append("-", 0, 0)
+	if (polynomial[2 - degree].number < 0)
+		output.insert(0, "-")
 
 	return output.toString()
 }
 
 fun printOkOutput(polynomial: List<PolynomialTerm>, degree: Int) {
-	println("Reduced form: ${getReducedForm(polynomial)} = 0")
+	println("Reduced form: ${getReducedForm(polynomial, degree)} = 0")
 	println("Polynomial degree: $degree")
 }

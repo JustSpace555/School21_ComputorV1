@@ -1,29 +1,19 @@
 package output.ok
 
 import models.Discriminant
-import java.util.*
 
-private fun printAppropriateNumber(input: Number) {
-	if (input is Int)
-		println(input)
-	else
-		System.out.printf(Locale.US, "%.6f\n", input)
-}
-
-fun printSolutions(solutions: List<Number>, discriminant: Discriminant) {
-	println("Discriminant: $discriminant")
-	when(solutions.size) {
-		2 -> {
-			println("Discriminant is strictly positive, the two solutions are:")
-			printAppropriateNumber(solutions[0])
-			printAppropriateNumber(solutions[1])
+fun printSolutions(answer: Triple<Discriminant, Number?, Number?>, degree: Int) {
+	if (degree >= 2)
+		println("Discriminant: ${answer.first}")
+	if (answer.second != null) {
+		if (answer.third != null) {
+			println("The two solutions are:")
+			println(answer.second)
+			println(answer.third)
+		} else {
+			println("The solution is: ${answer.second}")
 		}
-		1 -> {
-			println("The solution is:")
-			printAppropriateNumber(solutions[0])
-		}
-		0 -> {
-			println("Discriminant is strictly negative. There are no solutions.")
-		}
+	} else {
+		println("Discriminant is strictly negative. There are no solutions.")
 	}
 }

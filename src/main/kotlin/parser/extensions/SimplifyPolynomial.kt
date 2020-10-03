@@ -15,5 +15,5 @@ fun simplifyPolynomial(input: List<PolynomialTerm>): List<PolynomialTerm> {
 		}
 	}
 
-	return listOf(zeroDegreePolynomial, firstDegreePolynomial, secondDegreePolynomial)
+	return listOf(secondDegreePolynomial, firstDegreePolynomial, zeroDegreePolynomial)
 }
