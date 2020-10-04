@@ -1,5 +1,6 @@
 import calculations.calculateSolutions
 import models.PolynomialTerm
+import output.error.checkAndPrintError
 import output.error.printErrorOutput
 import output.ok.printOkOutput
 import output.ok.printSolutions
@@ -14,16 +15,11 @@ fun solver(polynomial: Triple<List<PolynomialTerm>, Int, SignalCodes>) {
 }
 
 fun main(args: Array<String>) {
-	if (args.size != 2) {
-		printErrorOutput(listOf(), -1, SignalCodes.WRONG_AMOUNT_ARGS)
-		return
+	if (checkAndPrintError(args.size != 2, SignalCodes.WRONG_AMOUNT_ARGS)) return
+
+	val polynomial = parser(args[1]).also {
+		if (checkAndPrintError(it.third != SignalCodes.OK, SignalCodes.OK)) return
 	}
 
-	val polynomial = parser(args[1])
-
-	if (polynomial.third != SignalCodes.OK) {
-		printErrorOutput(listOf(), -1, polynomial.third)
-		return
-	}
 	solver(polynomial)
 }

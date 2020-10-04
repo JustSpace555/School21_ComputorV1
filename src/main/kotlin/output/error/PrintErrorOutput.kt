@@ -4,6 +4,11 @@ import models.PolynomialTerm
 import output.ok.printOkOutput
 import parser.SignalCodes
 
+fun checkAndPrintError(value: Boolean, code: SignalCodes): Boolean {
+	if (value) printErrorOutput(listOf(), 0, code)
+	return value
+}
+
 fun printErrorOutput(polynomial: List<PolynomialTerm>, degree: Int, signal: SignalCodes) {
 	when (signal) {
 		SignalCodes.WRONG_NUMBER_FORMAT -> println("Wrong number format.")

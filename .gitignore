@@ -2,6 +2,7 @@ build/
 .gragle/
 .idea/
 .*
+bin/
 
 
 .gradle/6.3/executionHistory/executionHistory.bin

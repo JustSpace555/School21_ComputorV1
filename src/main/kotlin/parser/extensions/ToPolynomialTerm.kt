@@ -60,7 +60,7 @@ fun toPolynomialTerm(input: String): Pair<PolynomialTerm, SignalCodes> {
 
 	val emptyPolynomialTerm = PolynomialTerm(0, 0)
 
-	input.map {
+	input.forEach {
 		if (it.isLetter() && !(it == 'x' || it == 'X'))
 			return Pair(emptyPolynomialTerm, SignalCodes.WRONG_ARGUMENT_NAME)
 	}

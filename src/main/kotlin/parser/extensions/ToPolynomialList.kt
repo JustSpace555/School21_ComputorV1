@@ -13,12 +13,14 @@ fun toPolynomialList(input: List<String>): Pair<List<PolynomialTerm>, SignalCode
 			isWasEquality = true
 			continue
 		}
-		val term = toPolynomialTerm(element)
-		if (term.second != SignalCodes.OK)
-			return Pair(output, term.second)
 
+		val term = toPolynomialTerm(element).also {
+			if (it.second != SignalCodes.OK)
+				return Pair(output, it.second)
+		}
 		if (isWasEquality)
 			term.first.number *= -1
+
 		output.add(term.first)
 	}
 	return Pair(output.toList(), SignalCodes.OK)

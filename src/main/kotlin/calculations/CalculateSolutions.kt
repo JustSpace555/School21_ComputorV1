@@ -5,22 +5,15 @@ import models.Discriminant
 import models.PolynomialTerm
 import kotlin.math.sqrt
 
-private fun calculateTwoArg(discriminant: Discriminant, func: (Double) -> Double): Number {
-	val res = (-discriminant.argB + func(sqrt(discriminant.result.toDouble()))) / (2 * discriminant.argA)
-	if (res.toDouble() - res.toInt() == 0.0)
-		return res.toInt()
-	return res.toDouble()
-}
+private fun calculateTwoArg(discriminant: Discriminant, func: (Double) -> Double): Number =
+		((-discriminant.argB + func(sqrt(discriminant.result.toDouble()))) / (2 * discriminant.argA)).tryCastToInt()
 
-private fun calculateOneArg(discriminant: Discriminant): Number {
-	val res = if (discriminant.argA.toDouble() == 0.0)
-		-discriminant.argC.toDouble() / discriminant.argB
-	else
-		-discriminant.argB / (2 * discriminant.argA)
-	if (res.toDouble() - res.toInt() == 0.0)
-		return res.toInt()
-	return res.toDouble()
-}
+private fun calculateOneArg(discriminant: Discriminant): Number =
+		(if (discriminant.argA.toDouble() == 0.0)
+			-discriminant.argC.toDouble() / discriminant.argB
+		else
+			-discriminant.argB / (2 * discriminant.argA)
+		).tryCastToInt()
 
 fun calculateSolutions(polynomial: List<PolynomialTerm>): Triple<Discriminant, Number?, Number?> {
 	val discriminant = Discriminant(polynomial)

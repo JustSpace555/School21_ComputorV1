@@ -16,22 +16,24 @@ fun parser(input: String): Triple<List<PolynomialTerm>, Int, SignalCodes> {
 	if (inputArray.lastIndexOf("=") != inputArray.indexOf("="))
 		return parserError(SignalCodes.WRONG_AMOUNT_EQUAL_SIGNS)
 
-	val listPair = toPolynomialList(inputArray)
+	val listPair = toPolynomialList(inputArray).also {
+		if (it.second != SignalCodes.OK) return parserError(it.second)
+	}
 
-	if (listPair.second != SignalCodes.OK) return parserError(listPair.second)
+	var maxDegree = findMaxDegree(listPair.first).also {
+		if (it > 2) return parserError(SignalCodes.HIGHER_SECOND_DEGREE)
+	}
 
-	var maxDegree = findMaxDegree(listPair.first)
-	if (maxDegree > 2) return parserError(SignalCodes.HIGHER_SECOND_DEGREE)
+	val simpledPolynomial = simplifyPolynomial(listPair.first).also {
+		if (it[2 - maxDegree].number.toDouble() == 0.0)
+			maxDegree = findMaxDegree(it)
 
-	val simpledPolynomial = simplifyPolynomial(listPair.first)
-	if (simpledPolynomial[2 - maxDegree].number.toDouble() == 0.0)
-		maxDegree = findMaxDegree(simpledPolynomial)
-
-	if (simpledPolynomial[0].number == 0 && simpledPolynomial[1].number == 0) {
-		return if (simpledPolynomial[2].number == 0)
-			parserError(SignalCodes.EVERY_NUMBER_IS_SOLUTION)
-		else
-			parserError(simpledPolynomial, maxDegree, SignalCodes.NO_SOLUTION)
+		if (it[0].number == 0 && it[1].number == 0) {
+			return if (it[2].number == 0)
+				parserError(SignalCodes.EVERY_NUMBER_IS_SOLUTION)
+			else
+				parserError(it, maxDegree, SignalCodes.NO_SOLUTION)
+		}
 	}
 
 	return Triple(simpledPolynomial, maxDegree, SignalCodes.OK)

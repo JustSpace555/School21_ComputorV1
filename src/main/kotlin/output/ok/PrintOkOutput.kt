@@ -7,7 +7,7 @@ import models.PolynomialTerm
 import java.lang.StringBuilder
 
 private fun getReducedForm(polynomial: List<PolynomialTerm>, degree: Int): String {
-	if (polynomial.isEmpty() || polynomial[0].number == 0 && polynomial[1].number == 0 && polynomial[2].number == 0)
+	if (polynomial.isEmpty() || polynomial.all { it.number.toDouble() == 0.0 })
 		return "0"
 
 	val output = StringBuilder()
