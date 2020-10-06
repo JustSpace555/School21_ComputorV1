@@ -1,6 +1,6 @@
 import models.PolynomialTerm
 import org.junit.Test
-import kotlin.test.assertEquals
+import org.junit.Assert.assertEquals
 
 class PolynomialTermTests {
 
