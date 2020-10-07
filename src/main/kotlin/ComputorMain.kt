@@ -1,3 +1,5 @@
+package computor
+
 import calculations.calculateSolutions
 import models.PolynomialTerm
 import output.error.checkAndPrintError

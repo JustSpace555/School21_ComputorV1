@@ -12,11 +12,12 @@ TEST_FOLDER = src/test/kotlin
 
 NAME = computor
 
-SRC =	$(SRC_FOLDER)/Main.kt \
+SRC =	$(SRC_FOLDER)/ComputorMain.kt \
 		$(SRC_FOLDER)/calculations/CalculateSolutions.kt \
 		$(SRC_FOLDER)/globalextensions/NumberExtensions.kt \
 		$(SRC_FOLDER)/models/Discriminant.kt \
 		$(SRC_FOLDER)/models/PolynomialTerm.kt \
+		$(SRC_FOLDER)/models/Complex.kt \
 		$(SRC_FOLDER)/output/error/PrintErrorOutput.kt \
 		$(SRC_FOLDER)/output/ok/PrintOkOutput.kt \
 		$(SRC_FOLDER)/output/ok/PrintSolutions.kt \
