@@ -77,11 +77,11 @@ class SolverTest {
 			arrayOf(
 				"+2 * X^2 + 7 * X + 4",
 				"Reduced form: 2 * X^2 + 7 * X^1 + 4 * X^0 = 0\nPolynomial degree: 2\nDiscriminant: 17\nThe two solutions are:\n-2.7807764064044154\n-0.7192235935955849\n"
+			),
+			arrayOf(
+				"5.0 * -2 * -0.5 * X^0 + 3 * X^1 + 3 * X^2 = 1 * X^0 + 0 * X^1",
+				"Reduced form: 3 * X^2 + 3 * X^1 + 4 * X^0 = 0\nPolynomial degree: 2\nDiscriminant: -39\nThe two solutions are:\n-0.5 - 1.0408329997330663i\n-0.5 + 1.0408329997330663i\n"
 			)
-//			arrayOf(
-//				"5.0 * -2 * -0.5 * X^0 + 3 * X^1 + 3 * X^2 = 1 * X^0 + 0 * X^1",
-//				"Reduced form: 3 * X^2 + 3 * X^1 + 4 * X^0 = 0\nPolynomial degree: 2\nDiscriminant: -39\nThe two solutions are:\n-0.5 - 1.0408329997330663i\n-0.5 + 1.0408329997330663i\n"
-//			)
 		)
 		testInputs(inputs)
 	}

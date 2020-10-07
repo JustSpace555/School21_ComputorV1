@@ -19,7 +19,7 @@ operator fun Number.minus(input: Number): Number {
 }
 
 operator fun Number.div(input: Number): Number {
-	if (input is Int && this is Int)
+	if (input is Int && this is Int && this % input == 0)
 		return this / input
 	return this.toDouble() / input.toDouble()
 }
