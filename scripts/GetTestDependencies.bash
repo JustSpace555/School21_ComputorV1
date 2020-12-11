@@ -1,3 +1,4 @@
+#!/bin/bash
 DEP='Dependencies'
 JUNIT_FOLDER="$DEP/junit"
 
@@ -11,8 +12,8 @@ then
 
 	if [[ "$OSTYPE" == "linux-gnu"* ]];
 	then
-		wget https://search.maven.org/remotecontent?filepath=junit/junit/4.13/junit-4.13.jar
-		wget https://search.maven.org/remotecontent?filepath=org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+		wget --content-disposition https://search.maven.org/remotecontent?filepath=junit/junit/4.13/junit-4.13.jar
+		wget --content-disposition https://search.maven.org/remotecontent?filepath=org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
 
 	elif [[ "$OSTYPE" == "darwin"* ]];
 	then

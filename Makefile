@@ -41,7 +41,7 @@ tests:
 	@bash $(SCRIPTS_FOLDER)/GetTestDependencies.bash
 	@$(COMPILER) -cp $(DEPENDENCIES_FOLDER)/junit/junit.jar:. $(SRC_TEST) $(SRC)
 	@$(COMPILER_FOLDER)/kotlin -cp $(JUNIT_FOLDER)/junit.jar:$(JUNIT_FOLDER)/hamcrest-core.jar:. org.junit.runner.JUnitCore $(BUILD_TEST:.kt=)
-	@rm -rf calculations globalextensions META-INF models output parser *.class
+	@rm -rf calculations globalextensions META-INF models output parser *.class computor
 
 clean:
 	@rm -rf $(NAME).jar

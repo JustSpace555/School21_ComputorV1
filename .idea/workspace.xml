@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f617e35-80bf-468e-8351-db5a63c3c9f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/GetDependencies.bash" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/GetDependencies.bash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/MakeExecutable.bash" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/SolverTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/SolverTest.kt" afterDir="false" />
-      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/Makefile" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/Makefile" afterDir="false" />
-      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/scripts/GetDependencies.bash" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/scripts/GetDependencies.bash" afterDir="false" />
-      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/scripts/MakeExecutable.bash" beforeDir="false" />
-      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/ComputorMain.kt" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/ComputorMain.kt" afterDir="false" />
-      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/test/kotlin/SolverTest.kt" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/test/kotlin/SolverTest.kt" afterDir="false" />
-    </list>
+    <list default="true" id="6f617e35-80bf-468e-8351-db5a63c3c9f7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
