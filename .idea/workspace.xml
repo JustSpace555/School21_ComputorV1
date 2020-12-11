@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6f617e35-80bf-468e-8351-db5a63c3c9f7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/GetDependencies.bash" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/GetDependencies.bash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/MakeExecutable.bash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/SolverTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/SolverTest.kt" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/Makefile" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/Makefile" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/scripts/GetDependencies.bash" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/scripts/GetDependencies.bash" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/scripts/MakeExecutable.bash" beforeDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/ComputorMain.kt" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/ComputorMain.kt" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/test/kotlin/SolverTest.kt" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/test/kotlin/SolverTest.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1" />
+  </component>
+  <component name="ProjectId" id="1lW0fiOQnPZVYlTxSl9k0FbDXzI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="Gradle.PolynomialTermTests">
+    <configuration name="ParserTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;ParserTests&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="PolynomialTermTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;PolynomialTermTests&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SolverTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;SolverTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ComputorMainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="me.space.School21_ComputorV1.main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="all" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="computor.ComputorMainKt" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.ComputorMainKt" />
+      <item itemvalue="Gradle.ParserTests" />
+      <item itemvalue="Gradle.SolverTest" />
+      <item itemvalue="Gradle.PolynomialTermTests" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.PolynomialTermTests" />
+        <item itemvalue="Gradle.SolverTest" />
+        <item itemvalue="Gradle.ParserTests" />
+        <item itemvalue="Application.ComputorMainKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6f617e35-80bf-468e-8351-db5a63c3c9f7" name="Default Changelist" comment="" />
+      <created>1607697646812</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607697646812</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file:///media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/ComputorMain.kt</url>
+          <line>20</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

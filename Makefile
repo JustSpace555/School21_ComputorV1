@@ -5,8 +5,6 @@ COMPILER_FOLDER = $(DEPENDENCIES_FOLDER)/kotlinc/bin
 COMPILER = $(COMPILER_FOLDER)/kotlinc
 JUNIT_FOLDER = $(DEPENDENCIES_FOLDER)/junit/
 
-BUILD_FOLDER = build
-
 SRC_FOLDER = src/main/kotlin
 TEST_FOLDER = src/test/kotlin
 
@@ -38,7 +36,6 @@ BUILD_TEST = $(subst $(TEST_FOLDER)/,,$(SRC_TEST))
 all:
 	@bash $(SCRIPTS_FOLDER)/GetDependencies.bash
 	@$(COMPILER) $(SRC) -include-runtime -d $(NAME).jar
-	@bash $(SCRIPTS_FOLDER)/MakeExecutable.bash
 
 tests:
 	@bash $(SCRIPTS_FOLDER)/GetTestDependencies.bash
@@ -47,7 +44,7 @@ tests:
 	@rm -rf calculations globalextensions META-INF models output parser *.class
 
 clean:
-	@rm -rf $(NAME) $(NAME).jar config.json jre $(BUILD_FOLDER)
+	@rm -rf $(NAME).jar
 
 fclean: clean
 	@rm -rf $(DEPENDENCIES_FOLDER)

@@ -1,3 +1,4 @@
+import computor.solver
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Before
@@ -7,7 +8,6 @@ import parser.SignalCodes
 import parser.parser
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
-
 
 class SolverTest {
 

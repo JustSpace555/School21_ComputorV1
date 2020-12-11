@@ -19,7 +19,7 @@ fun main(args: Array<String>) {
 	if (checkAndPrintError(args.size != 1, SignalCodes.WRONG_AMOUNT_ARGS)) return
 
 	val polynomial = parser(args[0]).also {
-		if (checkAndPrintError(it.third != SignalCodes.OK, SignalCodes.OK)) return
+		if (checkAndPrintError(it.third != SignalCodes.OK, it.third)) return
 	}
 
 	solver(polynomial)
