@@ -11,7 +11,7 @@ fi
 
 if ! [ -d $DEP/$KOTLIN ]
 then
-	echo "Downloaging kotlin compiler...
+	echo "Downloading kotlin compiler...
 
 
 	"
