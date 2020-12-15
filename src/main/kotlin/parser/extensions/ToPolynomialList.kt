@@ -2,9 +2,8 @@ package parser.extensions
 
 import globalextensions.times
 import models.PolynomialTerm
-import parser.SignalCodes
 
-fun toPolynomialList(input: List<String>): Pair<List<PolynomialTerm>, SignalCodes> {
+fun toPolynomialList(input: List<String>): List<PolynomialTerm> {
 	val output = mutableListOf<PolynomialTerm>()
 	var isWasEquality = false
 
@@ -14,14 +13,11 @@ fun toPolynomialList(input: List<String>): Pair<List<PolynomialTerm>, SignalCode
 			continue
 		}
 
-		val term = toPolynomialTerm(element).also {
-			if (it.second != SignalCodes.OK)
-				return Pair(output, it.second)
-		}
+		val term = toPolynomialTerm(element)
 		if (isWasEquality)
-			term.first.number *= -1
+			term.number *= -1
 
-		output.add(term.first)
+		output.add(term)
 	}
-	return Pair(output.toList(), SignalCodes.OK)
+	return output.toList()
 }

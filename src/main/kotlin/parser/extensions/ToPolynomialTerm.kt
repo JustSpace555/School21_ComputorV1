@@ -1,15 +1,16 @@
 package parser.extensions
 
+import computor.models.exception.PolynomialArgumentNameException
+import computor.models.exception.PolynomialDegreeFormatException
+import computor.models.exception.PolynomialNumberFormatException
 import globalextensions.times
+import globalextensions.tryCastToInt
 import models.PolynomialTerm
-import parser.SignalCodes
 import java.lang.NumberFormatException
-import kotlin.math.absoluteValue
 
-fun getConstNumber(input: String): Pair<Number, SignalCodes> {
+fun getConstNumber(input: String): Number {
 
-	if (input.first().isLetter())
-		return Pair(1, SignalCodes.OK)
+	if (input.first().isLetter()) return 1
 
 	val numberListStr =
 		if (input.contains('*'))
@@ -24,56 +25,38 @@ fun getConstNumber(input: String): Pair<Number, SignalCodes> {
 	numberListStr.forEach {
 		if (it.contains('.')) {
 			try { number *= it.toDouble() }
-			catch (e: NumberFormatException) { return Pair(0, SignalCodes.WRONG_NUMBER_FORMAT) }
+			catch (e: NumberFormatException) { throw PolynomialNumberFormatException(it) }
 		} else {
 			try { number *= it.toInt() }
-			catch (e: NumberFormatException) { return Pair(0, SignalCodes.WRONG_NUMBER_FORMAT) }
+			catch (e: NumberFormatException) { throw PolynomialNumberFormatException(it) }
 		}
 	}
 
-	if (number.toDouble() - number.toInt() == 0.0)
-		number = number.toInt()
-
-	return Pair(number, SignalCodes.OK)
+	return number.tryCastToInt()
 }
 
-fun getDegree(input: String): Pair<Int, SignalCodes> {
+fun getDegree(input: String): Int {
 	if (!input.contains('^')) {
-		return if (input.last().isDigit() && (input.contains('x') || input.contains('X')))
-			Pair(0, SignalCodes.WRONG_DEGREE_FORMAT)
-		else if (input.contains('x') || input.contains('X'))
-			Pair(1, SignalCodes.OK)
-		else
-			Pair(0, SignalCodes.OK)
+		return when {
+			input.last().isDigit() && input.contains(Regex("[xX]")) ->
+				throw PolynomialDegreeFormatException(input)
+			input.contains(Regex("[xX]")) -> 1
+			else -> 0
+		}
 	}
 
 	val degree = try {
 		input.slice(input.indexOf('^') + 1 until input.length).toInt()
 	} catch (e: NumberFormatException) {
-		return Pair(0, SignalCodes.WRONG_DEGREE_FORMAT)
+		throw PolynomialDegreeFormatException(input)
 	}
 
-	return Pair(degree, SignalCodes.OK)
+	return degree
 }
 
-fun toPolynomialTerm(input: String): Pair<PolynomialTerm, SignalCodes> {
-
-	val emptyPolynomialTerm = PolynomialTerm(0, 0)
-
+fun toPolynomialTerm(input: String): PolynomialTerm {
 	input.forEach {
-		if (it.isLetter() && !(it == 'x' || it == 'X'))
-			return Pair(emptyPolynomialTerm, SignalCodes.WRONG_ARGUMENT_NAME)
+		if (it.isLetter() && !(it == 'x' || it == 'X')) throw PolynomialArgumentNameException(it)
 	}
-
-	val number = getConstNumber(input).also {
-		if (it.second != SignalCodes.OK)
-			return Pair(emptyPolynomialTerm, it.second)
-	}
-
-	val degree = getDegree(input).also {
-		if (it.second != SignalCodes.OK)
-			return Pair(emptyPolynomialTerm, it.second)
-	}
-
-	return Pair(PolynomialTerm(number.first, degree.first), SignalCodes.OK)
+	return PolynomialTerm(getConstNumber(input), getDegree(input))
 }

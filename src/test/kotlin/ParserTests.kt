@@ -1,9 +1,8 @@
+import computor.models.exception.ComputorException
 import org.junit.Test
-import parser.SignalCodes
 import parser.parser
 import java.lang.Exception
 import java.util.*
-
 
 class ParserTests {
 
@@ -60,15 +59,12 @@ class ParserTests {
 
 	private fun testInvalidInputs(input: List<String>) {
 		for (element in input) {
-			val parserOutput = parser(element)
-			if (parserOutput.third != SignalCodes.OK) {
-				println("Test passed: $element")
-				println("Fails with ${parserOutput.third}")
-				println()
+			try {
+				parser(element)
+			} catch (e: ComputorException) {
 				continue
 			}
-			val message = "Test fail on: $element with ${parserOutput.third}\n" + parserOutput.first.toString()
-			throw Exception(message)
+			throw Exception("Test fail on $element")
 		}
 	}
 }

@@ -12,3 +12,12 @@ fun findMaxDegree(input: List<PolynomialTerm>): Int {
 
 	return maxDegree
 }
+
+fun List<PolynomialTerm>.findPolynomialByDegree(degree: Int): PolynomialTerm? {
+	var polynomial: PolynomialTerm? = null
+	this.forEach(fun(p: PolynomialTerm) {
+		if (p.degree == degree)
+			polynomial = p
+	})
+	return polynomial
+}

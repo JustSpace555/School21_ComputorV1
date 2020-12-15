@@ -12,11 +12,18 @@ NAME = computor
 
 SRC =	$(SRC_FOLDER)/ComputorMain.kt \
 		$(SRC_FOLDER)/calculations/CalculateSolutions.kt \
+		$(SRC_FOLDER)/calculations/SampleMath.kt \
 		$(SRC_FOLDER)/globalextensions/NumberExtensions.kt \
 		$(SRC_FOLDER)/models/Discriminant.kt \
 		$(SRC_FOLDER)/models/PolynomialTerm.kt \
 		$(SRC_FOLDER)/models/Complex.kt \
-		$(SRC_FOLDER)/output/error/PrintErrorOutput.kt \
+		$(SRC_FOLDER)/models/Fraction.kt \
+		$(SRC_FOLDER)/models/exception/ComputorException.kt \
+		$(SRC_FOLDER)/models/exception/ArgumentException.kt \
+		$(SRC_FOLDER)/models/exception/NumberException.kt \
+		$(SRC_FOLDER)/models/exception/PolynomialException.kt \
+		$(SRC_FOLDER)/models/exception/SignException.kt \
+		$(SRC_FOLDER)/models/exception/SolutionException.kt \
 		$(SRC_FOLDER)/output/ok/PrintOkOutput.kt \
 		$(SRC_FOLDER)/output/ok/PrintSolutions.kt \
 		$(SRC_FOLDER)/parser/extensions/FindMaxDegree.kt \
@@ -25,7 +32,8 @@ SRC =	$(SRC_FOLDER)/ComputorMain.kt \
 		$(SRC_FOLDER)/parser/extensions/ToPolynomialList.kt \
 		$(SRC_FOLDER)/parser/extensions/ToPolynomialTerm.kt \
 		$(SRC_FOLDER)/parser/ParserMain.kt \
-		$(SRC_FOLDER)/parser/SignalCodes.kt
+		$(SRC_FOLDER)/parser/Flags.kt \
+		$(SRC_FOLDER)/parser/ParserFlags.kt
 
 SRC_TEST =	$(TEST_FOLDER)/ParserTests.kt \
 			$(TEST_FOLDER)/PolynomialTermTests.kt \

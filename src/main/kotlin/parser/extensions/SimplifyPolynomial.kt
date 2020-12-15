@@ -1,19 +1,20 @@
 package parser.extensions
 
+import computor.globalFlags
+import computor.parser.Flags
 import models.PolynomialTerm
+import output.ok.getReducedForm
 
 fun simplifyPolynomial(input: List<PolynomialTerm>): List<PolynomialTerm> {
-	var secondDegreePolynomial = PolynomialTerm(0, 2)
-	var firstDegreePolynomial = PolynomialTerm(0, 1)
-	var zeroDegreePolynomial = PolynomialTerm(0, 0)
+	val polynomialMap: MutableMap<Int, PolynomialTerm> = mutableMapOf()
 
-	for (term in input) {
-		when (term.degree) {
-			2 -> secondDegreePolynomial += term
-			1 -> firstDegreePolynomial += term
-			0 -> zeroDegreePolynomial += term
-		}
+	input.forEach {
+		val mapPol = polynomialMap[it.degree] ?: PolynomialTerm(0, it.degree)
+		polynomialMap[it.degree] = mapPol + it
 	}
 
-	return listOf(secondDegreePolynomial, firstDegreePolynomial, zeroDegreePolynomial)
+	return polynomialMap
+		.map { it.value }
+		.filter { it.number != 0 }
+		.sortedByDescending { it.degree }
 }

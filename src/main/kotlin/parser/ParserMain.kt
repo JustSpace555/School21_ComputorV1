@@ -1,40 +1,32 @@
 package parser
 
+import computor.models.exception.EqualSignAmountException
+import computor.models.exception.EveryNumberIsSolutionException
+import computor.models.exception.NoSolutionException
+import computor.models.exception.PolynomialMaxDegreeException
 import models.PolynomialTerm
-import parser.extensions.findMaxDegree
-import parser.extensions.putSpaces
-import parser.extensions.simplifyPolynomial
-import parser.extensions.toPolynomialList
+import parser.extensions.*
 
-private fun parserError(signal: SignalCodes) = Triple(listOf<PolynomialTerm>(), 0, signal)
-private fun parserError(polynomial: List<PolynomialTerm>, degree: Int, signal: SignalCodes) =
-		Triple(polynomial, degree, signal)
-
-fun parser(input: String): Triple<List<PolynomialTerm>, Int, SignalCodes> {
+fun parser(input: String): Pair<List<PolynomialTerm>, Int> {
 	val inputArray: List<String> = putSpaces(input).split(' ').filter { it.isNotEmpty() && it.isNotBlank() }
 
 	if (inputArray.lastIndexOf("=") != inputArray.indexOf("="))
-		return parserError(SignalCodes.WRONG_AMOUNT_EQUAL_SIGNS)
+		throw EqualSignAmountException()
 
-	val listPair = toPolynomialList(inputArray).also {
-		if (it.second != SignalCodes.OK) return parserError(it.second)
-	}
+	var maxDegree: Int
+	val simpledPolynomial = simplifyPolynomial(toPolynomialList(inputArray)).also {
 
-	var maxDegree = findMaxDegree(listPair.first).also {
-		if (it > 2) return parserError(SignalCodes.HIGHER_SECOND_DEGREE)
-	}
+		 maxDegree = findMaxDegree(it).also { degree ->
+			if (degree > 2) throw PolynomialMaxDegreeException()
+		}
 
-	val simpledPolynomial = simplifyPolynomial(listPair.first).also {
-		if (it[2 - maxDegree].number.toDouble() == 0.0)
-			maxDegree = findMaxDegree(it)
-
-		if (it[0].number == 0 && it[1].number == 0) {
-			return if (it[2].number == 0)
-				parserError(SignalCodes.EVERY_NUMBER_IS_SOLUTION)
+		if (it.findPolynomialByDegree(2) == null && it.findPolynomialByDegree(1) == null) {
+			if (it.findPolynomialByDegree(0) == null)
+				throw EveryNumberIsSolutionException(it, maxDegree)
 			else
-				parserError(it, maxDegree, SignalCodes.NO_SOLUTION)
+				throw NoSolutionException(it, maxDegree)
 		}
 	}
 
-	return Triple(simpledPolynomial, maxDegree, SignalCodes.OK)
+	return Pair(simpledPolynomial, maxDegree)
 }

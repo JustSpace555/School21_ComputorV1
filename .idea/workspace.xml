@@ -4,7 +4,80 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f617e35-80bf-468e-8351-db5a63c3c9f7" name="Default Changelist" comment="" />
+    <list default="true" id="2968dc09-815c-4996-af43-55b3734d0161" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/calculations/SampleMath.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/Fraction.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/exception/ArgumentException.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/exception/ComputorException.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/exception/NumberException.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/exception/PolynomialException.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/exception/SignException.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/exception/SolutionException.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/parser/Flags.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/parser/ParserFlags.kt" afterDir="false" />
+      <change afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/calculations/SampleMath.kt" afterDir="false" />
+      <change afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/models/Fraction.kt" afterDir="false" />
+      <change afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/models/exception/ArgumentException.kt" afterDir="false" />
+      <change afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/models/exception/ComputorException.kt" afterDir="false" />
+      <change afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/models/exception/NumberException.kt" afterDir="false" />
+      <change afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/models/exception/PolynomialException.kt" afterDir="false" />
+      <change afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/models/exception/SignException.kt" afterDir="false" />
+      <change afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/models/exception/SolutionException.kt" afterDir="false" />
+      <change afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/parser/Flags.kt" afterDir="false" />
+      <change afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/parser/ParserFlags.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ComputorMain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ComputorMain.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/calculations/CalculateSolutions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/calculations/CalculateSolutions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/globalextensions/NumberExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/globalextensions/NumberExtensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/models/Complex.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/models/Complex.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/models/Discriminant.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/models/Discriminant.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/models/PolynomialTerm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/models/PolynomialTerm.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/output/error/PrintErrorOutput.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/output/ok/PrintOkOutput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/output/ok/PrintOkOutput.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/output/ok/PrintSolutions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/output/ok/PrintSolutions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/parser/ParserMain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/parser/ParserMain.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/parser/SignalCodes.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/parser/extensions/FindMaxDegree.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/parser/extensions/FindMaxDegree.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/parser/extensions/SimplifyPolynomial.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/parser/extensions/SimplifyPolynomial.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/parser/extensions/ToPolynomialList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/parser/extensions/ToPolynomialList.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/parser/extensions/ToPolynomialTerm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/parser/extensions/ToPolynomialTerm.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ParserTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ParserTests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/SolverTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/SolverTest.kt" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/.gradle/6.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/.gradle/6.6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/.gradle/6.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/.gradle/6.6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/.gradle/6.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/.gradle/6.6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/.gradle/6.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/.gradle/6.6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/.idea/gradle.xml" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/.idea/misc.xml" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/.idea/misc.xml" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/.idea/workspace.xml" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/Makefile" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/Makefile" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/ComputorMain.kt" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/ComputorMain.kt" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/calculations/CalculateSolutions.kt" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/calculations/CalculateSolutions.kt" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/globalextensions/NumberExtensions.kt" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/globalextensions/NumberExtensions.kt" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/models/Complex.kt" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/models/Complex.kt" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/models/Discriminant.kt" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/models/Discriminant.kt" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/models/PolynomialTerm.kt" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/models/PolynomialTerm.kt" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/output/error/PrintErrorOutput.kt" beforeDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/output/ok/PrintOkOutput.kt" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/output/ok/PrintOkOutput.kt" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/output/ok/PrintSolutions.kt" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/output/ok/PrintSolutions.kt" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/parser/ParserMain.kt" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/parser/ParserMain.kt" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/parser/SignalCodes.kt" beforeDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/parser/extensions/FindMaxDegree.kt" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/parser/extensions/FindMaxDegree.kt" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/parser/extensions/SimplifyPolynomial.kt" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/parser/extensions/SimplifyPolynomial.kt" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/parser/extensions/ToPolynomialList.kt" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/parser/extensions/ToPolynomialList.kt" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/parser/extensions/ToPolynomialTerm.kt" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/parser/extensions/ToPolynomialTerm.kt" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/test/kotlin/ParserTests.kt" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/test/kotlin/ParserTests.kt" afterDir="false" />
+      <change beforePath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/test/kotlin/SolverTest.kt" beforeDir="false" afterPath="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/test/kotlin/SolverTest.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,10 +88,41 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="School21_ComputorV1" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="School21_ComputorV1" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="School21_ComputorV1" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1" />
   </component>
-  <component name="ProjectId" id="1lW0fiOQnPZVYlTxSl9k0FbDXzI" />
+  <component name="ProjectId" id="1lhLf1kRY2jUNk1kbHBm4Tm0Vmo" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -27,66 +131,24 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Gradle.PolynomialTermTests">
-    <configuration name="ParserTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.School21_ComputorV1::media:space:E29A136D9A133E0B:General:Programming:School21_ComputorV1 [test]">
+    <configuration name="School21_ComputorV1::media:space:E29A136D9A133E0B:General:Programming:School21_ComputorV1 [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalProjectPath" value="/media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ParserTests&quot;" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
+            <option value="test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="PolynomialTermTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;PolynomialTermTests&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="SolverTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;SolverTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
@@ -94,7 +156,7 @@
     <configuration name="ComputorMainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="me.space.School21_ComputorV1.main" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="all" />
+      <option name="PROGRAM_PARAMETERS" value="-r &quot;4 * x + x^0&quot;" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -106,15 +168,11 @@
     </configuration>
     <list>
       <item itemvalue="Application.ComputorMainKt" />
-      <item itemvalue="Gradle.ParserTests" />
-      <item itemvalue="Gradle.SolverTest" />
-      <item itemvalue="Gradle.PolynomialTermTests" />
+      <item itemvalue="Gradle.School21_ComputorV1::media:space:E29A136D9A133E0B:General:Programming:School21_ComputorV1 [test]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.PolynomialTermTests" />
-        <item itemvalue="Gradle.SolverTest" />
-        <item itemvalue="Gradle.ParserTests" />
+        <item itemvalue="Gradle.School21_ComputorV1::media:space:E29A136D9A133E0B:General:Programming:School21_ComputorV1 [test]" />
         <item itemvalue="Application.ComputorMainKt" />
       </list>
     </recent_temporary>
@@ -122,23 +180,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6f617e35-80bf-468e-8351-db5a63c3c9f7" name="Default Changelist" comment="" />
-      <created>1607697646812</created>
+      <changelist id="2968dc09-815c-4996-af43-55b3734d0161" name="Default Changelist" comment="" />
+      <created>1608044477951</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1607697646812</updated>
+      <updated>1608044477951</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file:///media/space/E29A136D9A133E0B/General/Programming/School21_ComputorV1/src/main/kotlin/ComputorMain.kt</url>
-          <line>20</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

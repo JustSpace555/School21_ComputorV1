@@ -1,32 +1,26 @@
 package globalextensions
 
-operator fun Number.plus(input: Number): Number {
-	if (input is Int && this is Int)
-		return this + input
-	return this.toDouble() + input.toDouble()
-}
+import computor.models.exception.PolynomialNumberDivideByZeroException
 
-operator fun Number.times(input: Number): Number {
-	if (input is Int && this is Int)
-		return this * input
-	return this.toDouble() * input.toDouble()
-}
+fun Number.invokeOperation(operation: (Double, Double) -> Double, other: Number): Number =
+	operation(this.toDouble(), other.toDouble()).tryCastToInt()
 
-operator fun Number.minus(input: Number): Number {
-	if (input is Int && this is Int)
-		return this - input
-	return this.toDouble() - input.toDouble()
-}
-
-operator fun Number.div(input: Number): Number {
-	if (input is Int && this is Int && this % input == 0)
-		return this / input
-	return this.toDouble() / input.toDouble()
+operator fun Number.plus(other: Number): Number = invokeOperation(Double::plus, other)
+operator fun Number.times(other: Number): Number = invokeOperation(Double::times, other)
+operator fun Number.minus(other: Number): Number = invokeOperation(Double::minus, other)
+operator fun Number.div(other: Number): Number {
+	if (other.compareTo(0) == 0) throw PolynomialNumberDivideByZeroException()
+	return invokeOperation(Double::div, other)
 }
 
 operator fun Number.unaryMinus(): Number = this * -1
 
-operator fun Number.compareTo(input: Number): Int = (this.toDouble() - input.toDouble()).toInt()
+operator fun Number.compareTo(other: Number): Int =
+	when {
+		this.toDouble() - other.toDouble() > 0.0 -> 1
+		this.toDouble() - other.toDouble() == 0.0 -> 0
+		else -> -1
+	}
 
 fun Number.tryCastToInt(): Number =
 		if (this.toDouble() - this.toInt() == 0.0)

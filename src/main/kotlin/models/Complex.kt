@@ -4,7 +4,7 @@ import globalextensions.compareTo
 import globalextensions.div
 import globalextensions.times
 
-class Complex(val re: Number, val im: Number): Number() {
+class Complex(private val re: Number, private val im: Number): Number() {
 	override fun toByte(): Byte { TODO("Not yet implemented") }
 	override fun toChar(): Char { TODO("Not yet implemented") }
 	override fun toDouble(): Double { TODO("Not yet implemented") }

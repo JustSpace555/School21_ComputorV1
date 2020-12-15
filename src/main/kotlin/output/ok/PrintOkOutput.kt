@@ -1,33 +1,33 @@
 package output.ok
 
+import computor.globalFlags
+import computor.parser.Flags
 import globalextensions.compareTo
 import globalextensions.times
 import models.Discriminant
 import models.PolynomialTerm
 import java.lang.StringBuilder
 
-private fun getReducedForm(polynomial: List<PolynomialTerm>, degree: Int): String {
-	if (polynomial.isEmpty() || polynomial.all { it.number.toDouble() == 0.0 })
-		return "0"
-
-	val output = StringBuilder()
-	polynomial.map {
-		if (it.number != 0) {
-			if (it.number < 0)
-				output.append(" - ${it.number * -1} * X^${it.degree}")
-			else
-				output.append(" + $it")
+fun getReducedForm(polynomial: List<PolynomialTerm>): String {
+	val outputString =
+		if (polynomial.isEmpty() || polynomial.all { it.number.compareTo(0) == 0 }) {
+			"0"
+		} else {
+			polynomial.joinToString(" + ").replace(" + -", " - ")
 		}
+
+	return if (globalFlags.contains(Flags.REDUCED_FORM)) {
+		outputString
+			.replace("X", "x")
+			.replace("^1", "")
+			.replace(Regex(" ? x\\^0"), "")
+			.replace("1 * ", "")
+	} else {
+		outputString
 	}
-
-	output.delete(0, 3)
-	if (polynomial[2 - degree].number < 0)
-		output.insert(0, "-")
-
-	return output.toString()
 }
 
 fun printOkOutput(polynomial: List<PolynomialTerm>, degree: Int) {
-	println("Reduced form: ${getReducedForm(polynomial, degree)} = 0")
+	println("Reduced form: ${getReducedForm(polynomial)} = 0")
 	println("Polynomial degree: $degree")
 }

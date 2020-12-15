@@ -1,14 +1,20 @@
 package computor
 
 import calculations.calculateSolutions
+import computor.models.exception.ArgumentsAmountException
+import computor.models.exception.ComputorException
+import computor.parser.Flags
+import computor.parser.parserFlags
 import models.PolynomialTerm
-import output.error.checkAndPrintError
 import output.ok.printOkOutput
 import output.ok.printSolutions
-import parser.SignalCodes
 import parser.parser
+import java.lang.Exception
 
-fun solver(polynomial: Triple<List<PolynomialTerm>, Int, SignalCodes>) {
+val listOfPossibleFlags: List<String> = listOf("-r", "-f", "-u")
+val globalFlags: MutableList<Flags> = mutableListOf()
+
+fun solver(polynomial: Pair<List<PolynomialTerm>, Int>) {
 	val solutions = calculateSolutions(polynomial.first)
 
 	printOkOutput(polynomial.first, polynomial.second)
@@ -16,11 +22,21 @@ fun solver(polynomial: Triple<List<PolynomialTerm>, Int, SignalCodes>) {
 }
 
 fun main(args: Array<String>) {
-	if (checkAndPrintError(args.size != 1, SignalCodes.WRONG_AMOUNT_ARGS)) return
-
-	val polynomial = parser(args[0]).also {
-		if (checkAndPrintError(it.third != SignalCodes.OK, it.third)) return
+	try {
+		parserFlags(args)
+		if (globalFlags.contains(Flags.USAGE)) {
+			println("-r: Show reduced form")
+			println("-f: Show result in fraction")
+			println("-u: Show this dialog message")
+			return
+		}
+		val filtered = args.filter { it !in listOfPossibleFlags }
+		if (filtered.size != 1) throw ArgumentsAmountException()
+		solver(parser(filtered.first()))
+	} catch (cExp: ComputorException) {
+		println(cExp.message)
+	} catch (exc: Exception) {
+		println("Something went wrong :(")
+		println(exc.message)
 	}
-
-	solver(polynomial)
 }
