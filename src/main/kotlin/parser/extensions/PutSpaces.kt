@@ -11,11 +11,17 @@ fun putSpaces(input: String): String {
 			'+' -> { output.append(' ') }
 			'=' -> output.append(" $c ")
 			'-' -> {
-				if (i + 1 in input.indices && input[i + 1] == ' ')
-					output.append(" $c")
-				else
-					output.append(c)
+					if (i + 1 in input.indices) {
+						when (input[i + 1]) {
+							' ' -> output.append(" $c")
+							'x', 'X' -> output.append("-1*X")
+							else -> output.append(c)
+						}
+					} else {
+						output.append(c)
+					}
 			}
+
 			else -> output.append(c)
 		}
 	}

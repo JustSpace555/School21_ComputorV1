@@ -18,7 +18,7 @@ fun parser(input: String): Pair<List<PolynomialTerm>, Int> {
 
 		 maxDegree = findMaxDegree(it).also { degree ->
 			if (degree > 2) throw PolynomialMaxDegreeException()
-		}
+		 }
 
 		if (it.findPolynomialByDegree(2) == null && it.findPolynomialByDegree(1) == null) {
 			if (it.findPolynomialByDegree(0) == null)
